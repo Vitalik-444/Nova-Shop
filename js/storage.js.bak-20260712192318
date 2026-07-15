@@ -1,0 +1,72 @@
+﻿const STORAGE_KEYS = {
+    cart: "cart",
+    favorites: "favorites",
+    theme: "theme"
+};
+
+let currentSessionUser = null;
+
+function setStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getStorage(key, fallback = null) {
+    const data = localStorage.getItem(key);
+
+    if (!data) {
+        return fallback;
+    }
+
+    try {
+        return JSON.parse(data);
+    } catch (error) {
+        console.error(`Ошибка чтения localStorage: ${key}`, error);
+        return fallback;
+    }
+}
+
+function removeStorage(key) {
+    localStorage.removeItem(key);
+}
+
+function getCart() {
+    return getStorage(STORAGE_KEYS.cart, []);
+}
+
+function saveCart(cart) {
+    setStorage(STORAGE_KEYS.cart, cart);
+}
+
+function getFavorites() {
+    return getStorage(STORAGE_KEYS.favorites, []);
+}
+
+function saveFavorites(favorites) {
+    setStorage(STORAGE_KEYS.favorites, favorites);
+}
+
+function getCurrentUser() {
+    return currentSessionUser;
+}
+
+function saveCurrentUser(user) {
+    currentSessionUser = user;
+}
+
+function logout() {
+    currentSessionUser = null;
+}
+
+function clearLegacyAuthStorage() {
+    removeStorage("users");
+    removeStorage("currentUser");
+}
+
+function getTheme() {
+    return getStorage(STORAGE_KEYS.theme, "light");
+}
+
+function saveTheme(theme) {
+    setStorage(STORAGE_KEYS.theme, theme);
+}
+

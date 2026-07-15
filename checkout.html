@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaShop | Оформление заказа</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header"></header>
+
+<main>
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="auth-wrapper">
+
+                <form id="checkoutForm" class="auth-form checkout-form">
+
+                    <h1 class="title">
+
+                        Оформление заказа
+
+                    </h1>
+
+                    <div class="checkout-grid">
+
+                        <div class="form-group">
+
+                            <label>Имя</label>
+
+                            <input
+                                    type="text"
+                                    id="checkoutName"
+                                    class="input"
+                                    placeholder="Введите имя"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Фамилия</label>
+
+                            <input
+                                    type="text"
+                                    id="checkoutSurname"
+                                    class="input"
+                                    placeholder="Введите фамилию"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Телефон</label>
+
+                            <input
+                                    type="tel"
+                                    id="checkoutPhone"
+                                    class="input"
+                                    placeholder="+380 XX XXX XX XX"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <input
+                                    type="email"
+                                    id="checkoutEmail"
+                                    class="input"
+                                    placeholder="Введите Email"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Город</label>
+
+                            <input
+                                    type="text"
+                                    id="checkoutCity"
+                                    class="input"
+                                    placeholder="Введите город"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Индекс</label>
+
+                            <input
+                                    type="text"
+                                    id="checkoutPostcode"
+                                    class="input"
+                                    placeholder="Почтовый индекс"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group checkout-wide">
+
+                            <label>Адрес доставки</label>
+
+                            <input
+                                    type="text"
+                                    id="checkoutAddress"
+                                    class="input"
+                                    placeholder="Улица, дом, квартира"
+                                    required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Способ доставки</label>
+
+                            <select id="checkoutDelivery" class="input" required>
+                                <option value="">Выберите доставку</option>
+                                <option value="courier">Курьером</option>
+                                <option value="post">В отделение почты</option>
+                                <option value="pickup">Самовывоз</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Способ оплаты</label>
+
+                            <select id="checkoutPayment" class="input" required>
+                                <option value="">Выберите оплату</option>
+                                <option value="card">Картой онлайн</option>
+                                <option value="cash">При получении</option>
+                                <option value="invoice">Счет для оплаты</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group checkout-wide">
+
+                            <label>Комментарий к заказу</label>
+
+                            <textarea
+                                    id="checkoutComment"
+                                    class="input textarea"
+                                    placeholder="Дополнительная информация для доставки"></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="checkout-total">
+                        <span>Сумма заказа</span>
+                        <strong class="checkout-total-price">0 $</strong>
+                    </div>
+
+                    <button class="btn auth-btn">
+
+                        Подтвердить заказ
+
+                    </button>
+
+                    <p class="auth-link">
+
+                        <a href="cart.html">
+
+                            Вернуться в корзину
+
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer"></footer>
+
+<script src="js/storage.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaShop | Регистрация</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header"></header>
+
+<main>
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="auth-wrapper">
+
+                <form id="registerForm" class="auth-form">
+
+                    <h1 class="title">
+
+                        Регистрация
+
+                    </h1>
+
+                    <div class="form-group">
+
+                        <label>Имя</label>
+
+                        <input
+                                type="text"
+                                id="registerName"
+                                class="input"
+                                placeholder="Введите имя"
+                                required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input
+                                type="email"
+                                id="registerEmail"
+                                class="input"
+                                placeholder="Введите Email"
+                                required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Пароль</label>
+
+                        <input
+                                type="password"
+                                id="registerPassword"
+                                class="input"
+                                placeholder="Введите пароль"
+                                required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Повторите пароль</label>
+
+                        <input
+                                type="password"
+                                id="registerPasswordRepeat"
+                                class="input"
+                                placeholder="Повторите пароль"
+                                required>
+
+                    </div>
+
+                    <button class="btn auth-btn">
+
+                        Создать аккаунт
+
+                    </button>
+
+                    <p class="auth-link">
+
+                        Уже зарегистрированы?
+
+                        <a href="login.html">
+
+                            Войти
+
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer"></footer>
+
+<script src="js/storage.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+
