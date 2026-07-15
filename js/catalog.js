@@ -8,6 +8,14 @@ async function loadCatalog() {
     const container = document.querySelector(".catalog-products");
     if (!container) return;
     catalogProducts = await getProducts(100);
+
+    // Support global search param `q` (from header)
+    const q = getQueryParam('q');
+    const searchEl = document.querySelector('.catalog-search');
+    if(q && searchEl){
+        searchEl.value = q;
+    }
+
     applyFilters();
     loadCategories();
 }

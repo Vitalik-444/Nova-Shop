@@ -15,8 +15,8 @@ function renderHeader(){
 </a>
 
 <div class="search">
-<input type="text" placeholder="Поиск товаров...">
-<button><i class="fa-solid fa-magnifying-glass"></i></button>
+<input id="globalSearchInput" type="text" placeholder="Поиск товаров...">
+<button id="globalSearchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
 </div>
 
 <div class="header-actions">
@@ -54,7 +54,29 @@ ${
     if(themeBtn){
         themeBtn.addEventListener("click", toggleTheme);
     }
+
+    // Header search handlers
+    const searchInput = header.querySelector('#globalSearchInput');
+    const searchBtn = header.querySelector('#globalSearchBtn');
+
+    if(searchBtn){
+        searchBtn.addEventListener('click', ()=>{
+            const q = searchInput ? searchInput.value.trim() : '';
+            if(q) location.href = `catalog.html?q=${encodeURIComponent(q)}`;
+            else location.href = 'catalog.html';
+        });
+    }
+
+    if(searchInput){
+        searchInput.addEventListener('keydown', (e)=>{
+            if(e.key === 'Enter'){
+                e.preventDefault();
+                if(searchBtn) searchBtn.click();
+            }
+        });
+    }
 }
+
 
 function renderFooter(){
     const footer = document.querySelector(".footer");
