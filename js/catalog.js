@@ -12,6 +12,7 @@ async function loadCatalog() {
     // Support global search param `q` (from header)
     const q = getQueryParam('q');
     const searchEl = document.querySelector('.catalog-search');
+    console.log('loadCatalog q=', q, 'searchEl=', !!searchEl);
     if(q && searchEl){
         searchEl.value = q;
     }

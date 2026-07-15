@@ -56,14 +56,17 @@ ${
     }
 
     // Header search handlers
-    const searchInput = header.querySelector('#globalSearchInput');
-    const searchBtn = header.querySelector('#globalSearchBtn');
+    const searchInput = header.querySelector('#globalSearchInput') || document.querySelector('#globalSearchInput');
+    const searchBtn = header.querySelector('#globalSearchBtn') || document.querySelector('#globalSearchBtn');
 
     if(searchBtn){
         searchBtn.addEventListener('click', ()=>{
             const q = searchInput ? searchInput.value.trim() : '';
-            if(q) location.href = `catalog.html?q=${encodeURIComponent(q)}`;
-            else location.href = 'catalog.html';
+            if(q) {
+                location.href = `catalog.html?q=${encodeURIComponent(q)}`;
+            } else {
+                location.href = 'catalog.html';
+            }
         });
     }
 
