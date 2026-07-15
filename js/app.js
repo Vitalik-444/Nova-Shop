@@ -1,4 +1,4 @@
-﻿const header = document.querySelector(".header");
+const header = document.querySelector(".header");
 const App = {
 
     products: [],
@@ -130,143 +130,8 @@ const App = {
 document.addEventListener("DOMContentLoaded", () => {
     App.init();
 });
-header.innerHTML = `
-        <div class="header-top">
-            <div class="container header-row">
-
-                <a href="index.html" class="logo">
-                    NovaShop
-                </a>
-
-                <a href="catalog.html" class="catalog-btn">
-                    <i class="fa-solid fa-bars"></i>
-                    <span>Каталог</span>
-                </a>
-
-                <div class="search">
-                    <input
-                        type="text"
-                        placeholder="Поиск товаров..."
-                    >
-
-                    <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-
-                <div class="header-actions">
-
-                    <button class="action-btn" id="themeBtn">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-
-                    <a href="favorites.html" class="action-btn">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="badge favorite-count">0</span>
-                    </a>
-
-                    <a href="cart.html" class="action-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="badge cart-count">0</span>
-                    </a>
-
-                    <a href="profile.html" class="action-btn">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-        `;
-const footer = document.querySelector(".footer");
-
-footer.innerHTML = `
-        <div class="container">
-
-            <div class="footer-content">
-
-                <div>
-
-                    <div class="footer-logo">
-                        NovaShop
-                    </div>
-
-                    <p class="footer-text">
-                        Современный интернет-магазин электроники, одежды, аксессуаров и товаров для дома.
-                    </p>
-
-                    <div class="socials">
-
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <h3 class="footer-title">
-                        Покупателям
-                    </h3>
-
-                    <div class="footer-links">
-                        <a href="#">Доставка</a>
-                        <a href="#">Оплата</a>
-                        <a href="#">Гарантия</a>
-                        <a href="#">Контакты</a>
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <h3 class="footer-title">
-                        Компания
-                    </h3>
-
-                    <div class="footer-links">
-                        <a href="#">О нас</a>
-                        <a href="#">Новости</a>
-                        <a href="#">Вакансии</a>
-                        <a href="#">Партнерам</a>
-                    </div>
-
-                </div>
-
-                <div>
-
-                    <h3 class="footer-title">
-                        Поддержка
-                    </h3>
-
-                    <div class="footer-links">
-                        <a href="#">FAQ</a>
-                        <a href="#">Возврат</a>
-                        <a href="#">Отзывы</a>
-                        <a href="#">Политика</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                © 2026 NovaShop. Все права защищены.
-            </div>
-
-        </div>
-        `;
+/* header moved to js/ui.js (renderHeader) */
+/* footer moved to js/ui.js (renderFooter) */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -1783,15 +1648,7 @@ function registerUser(event){
 
         "#registerEmail"
 
-    ).value.trim().toLowerCase();
-
-    const password=document.querySelector(
-
-        "#registerPassword"
-
-    ).value;
-
-    const repeat=document.querySelector(
+    ).value.trim().toLowerCase();`r`n`r`n    const password = document.querySelector("#registerPassword").value;`r`n`r`n    const repeat=document.querySelector(
 
         "#registerPasswordRepeat"
 
@@ -2131,4 +1988,5 @@ function submitCheckout(event){
     },1000);
 
 }
+
 
