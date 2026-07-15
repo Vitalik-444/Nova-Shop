@@ -62,6 +62,7 @@ ${
     if(searchBtn){
         searchBtn.addEventListener('click', ()=>{
             const q = searchInput ? searchInput.value.trim() : '';
+            console.log('Header search click, q="' + q + '"');
             if(q) {
                 location.href = `catalog.html?q=${encodeURIComponent(q)}`;
             } else {
@@ -74,6 +75,8 @@ ${
         searchInput.addEventListener('keydown', (e)=>{
             if(e.key === 'Enter'){
                 e.preventDefault();
+                const q = searchInput.value.trim();
+                console.log('Header search enter, q="' + q + '"');
                 if(searchBtn) searchBtn.click();
             }
         });

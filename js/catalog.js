@@ -113,11 +113,13 @@ function applyFilters() {
     const search = document.querySelector(".catalog-search");
     if (search) {
         const value = search.value.trim().toLowerCase();
+        console.log('applyFilters search value="' + value + '" (products before=' + catalogProducts.length + ')');
         if (value) {
             products = products.filter(product =>
                 product.title.toLowerCase().includes(value)
             );
         }
+        console.log('applyFilters filtered count=' + products.length);
     }
     const sort = document.querySelector(".catalog-sort");
     if (sort) {
