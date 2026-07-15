@@ -1648,7 +1648,11 @@ function registerUser(event){
 
         "#registerEmail"
 
-    ).value.trim().toLowerCase();`r`n`r`n    const password = document.querySelector("#registerPassword").value;`r`n`r`n    const repeat=document.querySelector(
+    ).value.trim().toLowerCase();
+
+    const password = document.querySelector("#registerPassword").value;
+
+    const repeat=document.querySelector(
 
         "#registerPasswordRepeat"
 
