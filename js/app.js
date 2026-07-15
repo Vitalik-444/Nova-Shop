@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadPopularProducts() {
+    console.log('loadPopularProducts called');
 
     const productsContainer = document.querySelector(
         ".popular .products-grid"
